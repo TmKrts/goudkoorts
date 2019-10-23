@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Goudkoorts_Code.Domain
 {
-    class Game
+    class Rail
     {
 
     }

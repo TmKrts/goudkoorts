@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Goudkoorts_Code.View.InputView" Collapsed="true">
-    <Position X="4.25" Y="1" Width="1.5" />
+  <Class Name="Goudkoorts_Code.View.InputView">
+    <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Goudkoorts_Code.View.OutputView" Collapsed="true">
-    <Position X="7" Y="1" Width="1.5" />
+  <Class Name="Goudkoorts_Code.View.OutputView">
+    <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Goudkoorts_Code.Process.Controller" Collapsed="true">
+  <Class Name="Goudkoorts_Code.Process.Controller">
     <Position X="5.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAIAAIAAAAAAAAAAA=</HashCode>
       <FileName>Process\Controller.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -26,6 +26,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Process\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts_Code.Domain.Game">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Game.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
