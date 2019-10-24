@@ -30,20 +30,20 @@ namespace Goudkoorts_Code.Domain
             shiproute = new BaseRail[8];
             vehicles = new List<Vehicle>();
 
-            WareHouse WH1 = new WareHouse();
-            WareHouse WH2 = new WareHouse();
-            WareHouse WH3 = new WareHouse();
-            wareHouses[0] = WH1;
-            wareHouses[1] = WH2;
-            wareHouses[2] = WH3;
+            WareHouse WHA = new WareHouse();
+            WareHouse WHB = new WareHouse();
+            WareHouse WHC = new WareHouse();
+            wareHouses[0] = WHA;
+            wareHouses[1] = WHB;
+            wareHouses[2] = WHC;
 
             // First three columns (to the first inner switch)
             BaseRail NR1 = new NormalRail();
-            WH1.Next = NR1;
+            WHA.Next = NR1;
             BaseRail NR2 = new NormalRail();
-            WH2.Next = NR2;
+            WHB.Next = NR2;
             BaseRail NR3 = new NormalRail();
-            WH3.Next = NR3;
+            WHC.Next = NR3;
 
             BaseRail NR4 = new NormalRail();
             NR1.Next = NR4;
@@ -119,7 +119,7 @@ namespace Goudkoorts_Code.Domain
             BaseRail NR25 = new NormalRail();
             NR22.Next = NR25;
 
-            // column 10 till 15
+            // column 10 till 13
             BaseRail NR26 = new NormalRail();
             IS3.Next = NR26;
             BaseRail NR27 = new NormalRail();
@@ -135,20 +135,30 @@ namespace Goudkoorts_Code.Domain
             BaseRail NR31 = new NormalRail();
             NR29.Next = NR31;
 
+
+            // column 13 and 14 with the first channel_pieces
+            BaseRail CP1 = new Channel_Piece();
             BaseRail NR32 = new NormalRail();
             NR30.Next = NR32;
             BaseRail NR33 = new NormalRail();
             NR31.Next = NR33;
 
+            BaseRail CP2 = new Channel_Piece();
             BaseRail NR34 = new NormalRail();
             NR32.Next = NR34;
             BaseRail NR35 = new NormalRail();
             NR33.Next = NR35;
 
-            // The first parkRails are coming..
+            // The first parkRails is there... column 15
+            BaseRail CP3 = new Channel_Piece();
             BaseRail NR36 = new NormalRail();
             NR34.Next = NR36;
             BaseRail PR1 = new ParkRail();
+            NR35.Next = PR1;
+
+            // column 16 the Quay and Dock
+            BaseRail dock = new Dock();
+
         }
     }
 }

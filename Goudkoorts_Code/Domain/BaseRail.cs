@@ -16,8 +16,8 @@ namespace Goudkoorts_Code.Domain
             get; 
             set; 
         }
-        public abstract char print();
+        public abstract char Print();
 
-        public abstract bool MoveToThis(Vehicle vehicle)
+        public abstract bool MoveToThis(Vehicle vehicle);
     }
 }

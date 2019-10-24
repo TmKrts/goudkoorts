@@ -46,5 +46,10 @@ namespace Goudkoorts_Code.Domain
                 Previous = _previousUp;
             }
         }
+
+        public override char Print()
+        {
+            return 'p';
+        }
     }
 }
