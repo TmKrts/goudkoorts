@@ -37,27 +37,27 @@ namespace Goudkoorts_Code.View
             Console.WriteLine();
             foreach (BaseRail baseRail in map.Row1)
             {
-                Console.WriteLine(baseRail.Print());
+                Console.Write(baseRail.Print());
             }
-
+            Console.WriteLine();
             foreach (BaseRail baseRail in map.Row2)
             {
-                Console.WriteLine(baseRail.Print());
+                Console.Write(baseRail.Print());
             }
-
+            Console.WriteLine();
             foreach (BaseRail baseRail in map.Row3)
             {
-                Console.WriteLine(baseRail.Print());
+                Console.Write(baseRail.Print());
             }
-
+            Console.WriteLine();
             foreach (BaseRail baseRail in map.Row4)
             {
-                Console.WriteLine(baseRail.Print());
+                Console.Write(baseRail.Print());
             }
-
+            Console.WriteLine();
             foreach (BaseRail baseRail in map.Row5)
             {
-                Console.WriteLine(baseRail.Print());
+                Console.Write(baseRail.Print());
             }
         }
     }

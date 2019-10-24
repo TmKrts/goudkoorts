@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 
 namespace Goudkoorts_Code.Domain
-{
+{ 
     class Map
-    {
-    
+    {    /*
         public BaseRail[] Row1 { get; }
         public BaseRail[] Row2 { get; }
         public BaseRail[] Row3 { get; }
@@ -18,8 +17,6 @@ namespace Goudkoorts_Code.Domain
         private BaseSwitch[] _switches;
         private BaseRail[] _shiproute;
         private List<Vehicle> _vehicles;
-        
-
     
         public Map()
         {
@@ -327,9 +324,9 @@ namespace Goudkoorts_Code.Domain
             Row5[20] = PR6;
             Row5[21] = PR7;
             Row5[22] = PR8;
-        } 
+        } */
 
-        /* the correct one
+        // the correct one
         private WareHouse[] spawnPoints;
         private BaseSwitch[] Switches;
         private List<Vehicle> Movables;
@@ -495,7 +492,7 @@ namespace Goudkoorts_Code.Domain
             Channel_Piece W1 = new Channel_Piece();
             Channel_Piece W2 = new Channel_Piece();
             Dock W3 = new Dock();
-            H1.Channel_Piece = W2;
+            H1.Dock = W2;
             Channel_Piece W4 = new Channel_Piece();
             Channel_Piece W5 = new Channel_Piece();
             Channel_Piece W6 = new Channel_Piece();
@@ -530,17 +527,17 @@ namespace Goudkoorts_Code.Domain
             Row1[1] = DT1;
             Row1[2] = DT4;
             Row1[3] = DT7;
-            Row1[4] = null;
+            Row1[4] = new Space();
             Row1[5] = DT11;
             Row1[6] = DT13;
             Row1[7] = DT15;
             Row1[8] = DT16;
             Row1[9] = DT17;
-            Row1[10] = null;
-            Row1[11] = null;
-            Row1[12] = null;
-            Row1[13] = null;
-            Row1[14] = null;
+            Row1[10] = new Space();
+            Row1[11] = new Space();
+            Row1[12] = new Space();
+            Row1[13] = new Space();
+            Row1[14] = new Space();
             Row1[15] = W1;
             Row1[16] = W2;
             Row1[17] = W3;
@@ -550,15 +547,15 @@ namespace Goudkoorts_Code.Domain
             Row1[21] = W7;
             Row1[22] = W8;
 
-            Row2[0] = null;
-            Row2[1] = null;
-            Row2[2] = null;
+            Row2[0] = new Space();
+            Row2[1] = new Space();
+            Row2[2] = new Space();
             Row2[3] = S1;
             Row2[4] = DT10;
             Row2[5] = S2;
-            Row2[6] = null;
-            Row2[7] = null;
-            Row2[8] = null;
+            Row2[6] = new Space();
+            Row2[7] = new Space();
+            Row2[8] = new Space();
             Row2[9] = S5;
             Row2[10] = DT21;
             Row2[11] = DT22;
@@ -578,19 +575,19 @@ namespace Goudkoorts_Code.Domain
             Row3[1] = DT2;
             Row3[2] = DT5;
             Row3[3] = DT8;
-            Row3[4] = null;
+            Row3[4] = new Space();
             Row3[5] = DT12;
             Row3[6] = DT14;
-            Row3[7] = null;
+            Row3[7] = new Space();
             Row3[8] = DT18;
             Row3[9] = DT19;
 
-            Row4[0] = null;
-            Row4[1] = null;
-            Row4[2] = null;
-            Row4[3] = null;
-            Row4[4] = null;
-            Row4[5] = null;
+            Row4[0] = new Space();
+            Row4[1] = new Space();
+            Row4[2] = new Space();
+            Row4[3] = new Space();
+            Row4[4] = new Space();
+            Row4[5] = new Space();
             Row4[6] = S3;
             Row4[7] = DT20;
             Row4[8] = S4;
@@ -602,7 +599,7 @@ namespace Goudkoorts_Code.Domain
             Row5[4] = DT32;
             Row5[5] = DT33;
             Row5[6] = DT34;
-            Row5[7] = null;
+            Row5[7] = new Space();
             Row5[8] = DT35;
             Row5[9] = DT36;
             Row5[10] = DT37;
@@ -619,6 +616,6 @@ namespace Goudkoorts_Code.Domain
             Row5[21] = SH7;
             Row5[22] = SH8;
         }
-        */
+        
     }
 }
