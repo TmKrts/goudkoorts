@@ -17,10 +17,10 @@ namespace Goudkoorts_Code.Process
             game = new Game();
         }
 
-        public void SetUpGame()
+        public void Start()
         {
             outputView.ShowStartScreen();
-            game.GenerateField();
+            outputView.DrawMap();
         }
     }
 }

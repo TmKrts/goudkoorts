@@ -6,5 +6,6 @@ namespace Goudkoorts_Code.Domain
 {
     class NormalRail : BaseRail
     {
+
     }
 }

@@ -4,13 +4,8 @@ using System.Text;
 
 namespace Goudkoorts_Code.Domain
 {
-    class Game
+    class WareHouse : BaseRail
     {
-        private Map map;
 
-        public Game()
-        {
-            map = new Map();
-        }
     }
 }

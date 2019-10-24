@@ -7,7 +7,7 @@ namespace Goudkoorts_Code
     {
         static void Main(string[] args)
         {
-            new Controller().SetUpGame();
+            new Controller().Start();
         }
     }
 }
