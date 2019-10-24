@@ -6,13 +6,13 @@ namespace Goudkoorts_Code.Domain
 {
     class Channel_Piece : BaseRail
     {
-        public override bool MoveToThis(Vehicle movable)
+        public override bool MoveToThis(Vehicle vehicle)
         {
             if (Vehicle == null)
             {
-                Vehicle = movable;
-                movable.onTrack.Vehicle = null;
-                movable.onTrack = this;
+                Vehicle = vehicle;
+                vehicle.onTrack.Vehicle = null;
+                vehicle.onTrack = this;
                 return true;
             }
 

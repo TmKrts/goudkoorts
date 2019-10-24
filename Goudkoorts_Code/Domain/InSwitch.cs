@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Goudkoorts_Code.Domain
@@ -35,6 +36,11 @@ namespace Goudkoorts_Code.Domain
         public override char Print()
         {
             return 'p';
+        }
+
+        public override void SwitchSwitch()
+        {
+            throw new NotImplementedException();
         }
     }
 }

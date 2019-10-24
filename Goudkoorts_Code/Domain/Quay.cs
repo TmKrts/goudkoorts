@@ -7,7 +7,7 @@ namespace Goudkoorts_Code.Domain
 {
     class Quay : BaseRail
     {
-        public Dock Dock
+        public Channel_Piece Dock
         {
             get;
             set;

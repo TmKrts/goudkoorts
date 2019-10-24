@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Goudkoorts_Code.Domain
@@ -11,11 +12,13 @@ namespace Goudkoorts_Code.Domain
             get;
             set;
         }
+
         public Vehicle Vehicle 
         { 
             get; 
             set; 
         }
+
         public abstract char Print();
 
         public abstract bool MoveToThis(Vehicle vehicle);
