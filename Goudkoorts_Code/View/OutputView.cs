@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Goudkoorts_Code.Domain;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -28,13 +29,36 @@ namespace Goudkoorts_Code.View
             Console.Clear();
         }
 
-        public void DrawMap()
+        public void DrawMap(Map map, int score)
         {
             Console.Clear();
             Console.WriteLine("GOUDKOORTS");
             Console.WriteLine("Your score: " + 0); //proberen score te binden ;)
             Console.WriteLine();
+            foreach (BaseRail baseRail in map.Row1)
+            {
+                Console.WriteLine(baseRail.Print());
+            }
 
+            foreach (BaseRail baseRail in map.Row2)
+            {
+                Console.WriteLine(baseRail.Print());
+            }
+
+            foreach (BaseRail baseRail in map.Row3)
+            {
+                Console.WriteLine(baseRail.Print());
+            }
+
+            foreach (BaseRail baseRail in map.Row4)
+            {
+                Console.WriteLine(baseRail.Print());
+            }
+
+            foreach (BaseRail baseRail in map.Row5)
+            {
+                Console.WriteLine(baseRail.Print());
+            }
         }
     }
 }

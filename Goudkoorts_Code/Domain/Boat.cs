@@ -24,7 +24,7 @@ namespace Goudkoorts_Code.Domain
             {
                 return 'B';
             }
-            String printString = "" + load;
+            String printString = "" + Load;
             char print = printString[0];
             return print;
         }

@@ -9,18 +9,20 @@ namespace Goudkoorts_Code.Process
     class Controller
     {
         private OutputView outputView;
-        private Game game;
+        private Map map;
+
+        public static int Score;
 
         public Controller()
         {
             outputView = new OutputView();
-            game = new Game();
+            map = new Map();
         }
 
         public void Start()
         {
             outputView.ShowStartScreen();
-            outputView.DrawMap();
+            outputView.DrawMap(map, Score);
         }
     }
 }
