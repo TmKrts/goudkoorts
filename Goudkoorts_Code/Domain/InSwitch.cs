@@ -20,5 +20,23 @@ namespace Goudkoorts_Code.Domain
             _previousUp = previousrailUp;
             _previousDown = previousRailDown;
         }
+
+        public override char Print()
+        {
+            return 'p';
+        }
+
+        public override bool MoveToThis(Vehicle movable)
+        {
+            if (Vehicle == null)
+            {
+                Vehicle = movable;
+                movable.onTrack.Vehicle = null;
+                movable.onTrack = this;
+                return true;
+            }
+
+            return false;
+        }
     }
 }
