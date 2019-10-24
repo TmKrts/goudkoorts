@@ -11,5 +11,13 @@ namespace Goudkoorts_Code.Domain
             get;
             set;
         }
+        public Vehicle Vehicle 
+        { 
+            get; 
+            set; 
+        }
+        public abstract char print();
+
+        public abstract bool MoveToThis(Vehicle vehicle)
     }
 }
