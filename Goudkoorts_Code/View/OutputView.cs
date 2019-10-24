@@ -27,12 +27,17 @@ namespace Goudkoorts_Code.View
             input = Console.ReadKey();
             Console.Clear();
         }
+        public void ShowEndScreen() {
+            Console.WriteLine("The cart has crashed, you died!");
+            Console.WriteLine("Press S to exit");
+        }
 
-        public void DrawMap()
+        public void DrawMap(Map map, int score) //DrawMap
         {
             Console.Clear();
-            Console.WriteLine("GOUDKOORTS");
-            Console.WriteLine("Your score: " + 0); //proberen score te binden ;)
+            Console.WriteLine("~~~~~~GOUDKOORTS~~~~~~");
+            Console.WriteLine();
+            Console.WriteLine("Your score: " + score); //proberen score te binden ;)
             Console.WriteLine();
 
         }
