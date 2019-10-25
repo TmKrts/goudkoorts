@@ -23,7 +23,7 @@ namespace Goudkoorts_Code.Process
             _OutputView = new OutputView();
             _Map = new Map();
             _OutputView.DrawMap(_Map, Score);
-            OutputView.PrintControls();
+            _OutputView.PrintControls();
 
             _Timer = new Timer();
             _Timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
@@ -37,7 +37,7 @@ namespace Goudkoorts_Code.Process
             _Timer.Enabled = true;
             while (_Playing)
             {
-                int result = InputView.GetSwitchNumber();
+                int result = _InputView.GetSwitchNumber();
                 switch(result)
                 {
                     case -1:
@@ -47,31 +47,31 @@ namespace Goudkoorts_Code.Process
                         _Map.DoSwitch(1);
                         Console.Clear();
                         _OutputView.DrawMap(_Map, Score);
-                        OutputView.PrintControls();
+                        _OutputView.PrintControls();
                         break;
                     case 2:
                         _Map.DoSwitch(2);
                         Console.Clear();
                         _OutputView.DrawMap(_Map, Score);
-                        OutputView.PrintControls();
+                        _OutputView.PrintControls();
                         break;
                     case 3:
                         _Map.DoSwitch(3);
                         Console.Clear();
                         _OutputView.DrawMap(_Map, Score);
-                        OutputView.PrintControls();
+                        _OutputView.PrintControls();
                         break;
                     case 4:
                         _Map.DoSwitch(4);
                         Console.Clear();
                         _OutputView.DrawMap(_Map, Score);
-                        OutputView.PrintControls();
+                        _OutputView.PrintControls();
                         break;
                     case 5:
                         _Map.DoSwitch(5);
                         Console.Clear();
                         _OutputView.DrawMap(_Map, Score);
-                        OutputView.PrintControls();
+                        _OutputView.PrintControls();
                         break;
                 }
             }
@@ -82,7 +82,7 @@ namespace Goudkoorts_Code.Process
             _Playing = false;
             _Timer.Enabled = false;
 
-            bool notCrashed = Map.MoveVehicles();
+            bool notCrashed = _Map.MoveVehicles();
             if(!notCrashed)
             {
                 CollisionTriggerd();
@@ -112,7 +112,7 @@ namespace Goudkoorts_Code.Process
         private void CollisionTriggerd()
         {
             _Timer.Enabled = false;
-            OutputView.ShowEndScreen();
+            _OutputView.ShowEndScreen();
             Console.ReadKey();
             Environment.Exit(0);
         }
