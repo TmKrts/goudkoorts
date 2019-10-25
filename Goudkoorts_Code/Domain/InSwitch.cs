@@ -22,18 +22,6 @@ namespace Goudkoorts_Code.Domain
             _previousDown = previousRailDown;
         }
 
-        public override bool MoveToThis(Vehicle vehicle)
-        {
-            if (Vehicle == null)
-            {
-                Vehicle = vehicle;
-                vehicle.onTrack.Vehicle = null;
-                vehicle.onTrack = this;
-                return true;
-            }
-            return false;
-        }
-
         public override void DoSwitch()
         {
             if (Vehicle == null)

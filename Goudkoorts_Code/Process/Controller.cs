@@ -22,6 +22,7 @@ namespace Goudkoorts_Code.Process
             _InputView = new InputView();
             _OutputView = new OutputView();
             _Map = new Map();
+            _OutputView.ShowStartScreen();
             _OutputView.DrawMap(_Map, Score);
             _OutputView.PrintControls();
 
