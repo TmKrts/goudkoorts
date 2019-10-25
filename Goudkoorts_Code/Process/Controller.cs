@@ -3,26 +3,125 @@ using Goudkoorts_Code.View;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Timers;
 
 namespace Goudkoorts_Code.Process
 {
     class Controller
     {
-        private OutputView outputView;
-        private Map map;
-
+        private InputView _InputView;
+        private OutputView _OutputView;
+        private Map _Map;
+        private int _Buffer = 1000;
+        private Timer _Timer;
+        private bool _Playing;
         public static int Score;
 
         public Controller()
         {
-            outputView = new OutputView();
-            map = new Map();
+            _InputView = new InputView();
+            _OutputView = new OutputView();
+            _Map = new Map();
+            _OutputView.DrawMap(_Map, Score);
+            OutputView.PrintControls();
+
+            _Timer = new Timer();
+            _Timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            _Playing = true;
+            Start();
         }
 
         public void Start()
         {
-            outputView.ShowStartScreen();
-            outputView.DrawMap(map, Score);
+            _Timer.Interval = _Buffer;
+            _Timer.Enabled = true;
+            while (_Playing)
+            {
+                int result = InputView.GetSwitchNumber();
+                switch(result)
+                {
+                    case -1:
+                        Environment.Exit(0);
+                        break;
+                    case 1:
+                        _Map.DoSwitch(1);
+                        Console.Clear();
+                        _OutputView.DrawMap(_Map, Score);
+                        OutputView.PrintControls();
+                        break;
+                    case 2:
+                        _Map.DoSwitch(2);
+                        Console.Clear();
+                        _OutputView.DrawMap(_Map, Score);
+                        OutputView.PrintControls();
+                        break;
+                    case 3:
+                        _Map.DoSwitch(3);
+                        Console.Clear();
+                        _OutputView.DrawMap(_Map, Score);
+                        OutputView.PrintControls();
+                        break;
+                    case 4:
+                        _Map.DoSwitch(4);
+                        Console.Clear();
+                        _OutputView.DrawMap(_Map, Score);
+                        OutputView.PrintControls();
+                        break;
+                    case 5:
+                        _Map.DoSwitch(5);
+                        Console.Clear();
+                        _OutputView.DrawMap(_Map, Score);
+                        OutputView.PrintControls();
+                        break;
+                }
+            }
+        }
+
+        private void TimerEnd()
+        {
+            _Playing = false;
+            _Timer.Enabled = false;
+
+            bool notCrashed = Map.MoveVehicles();
+            if(!notCrashed)
+            {
+                CollisionTriggerd();
+            }
+            _OutputView.DrawMap(_Map, Score);
+            _Map.SpawnShip();
+            if(Score > 17)
+            {
+                _Map.SpawnCart();
+            } else
+            {
+                Random r = new Random();
+                int i = r.Next(3);
+                if(i == 0)
+                {
+                    _Map.SpawnCart();
+                }
+            }
+            _OutputView.DrawMap(_Map, Score);
+            _OutputView.PrintControls();
+            if(_Buffer > 1500)
+            {
+                _Buffer -= 100;
+            }
+        }
+
+        private void CollisionTriggerd()
+        {
+            _Timer.Enabled = false;
+            OutputView.ShowEndScreen();
+            Console.ReadKey();
+            Environment.Exit(0);
+        }
+
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            TimerEnd();
+            _Playing = true;
+            Start();
         }
     }
 }
