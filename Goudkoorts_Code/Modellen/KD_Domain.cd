@@ -1,48 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Goudkoorts_Code.Domain.Vehicle">
-    <Position X="3.75" Y="6.25" Width="1.5" />
+    <Position X="7" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAEAAA=</HashCode>
       <FileName>Domain\Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.Domain.BaseRail">
-    <Position X="10.5" Y="2.25" Width="1.5" />
+    <Position X="9.25" Y="2.25" Width="1.5" />
+    <AssociationLine Name="Vehicle" Type="Goudkoorts_Code.Domain.Vehicle" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.062" Y="3.997" />
+        <Point X="10.062" Y="5.562" />
+        <Point X="8.5" Y="5.562" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.135" Y="-0.39" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Domain\BaseRail.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Vehicle" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Goudkoorts_Code.Domain.Map">
-    <Position X="3.75" Y="2.5" Width="1.5" />
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <AssociationLine Name="_Vehicles" Type="Goudkoorts_Code.Domain.Vehicle" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="5.045" />
+        <Point X="4.5" Y="5.5" />
+        <Point X="7" Y="5.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_WareHouse" Type="Goudkoorts_Code.Domain.WareHouse" FixedFromPoint="true">
+      <Path>
+        <Point X="5.25" Y="3.75" />
+        <Point X="7" Y="3.75" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AEAAAAQAAAAAAAAAAAAAAAAA8AMAAAAAAAABAAACAAA=</HashCode>
+      <HashCode>AAAAAAAAEAIAAAAAAEAAQgAA8AEIAAAAAAABAAAACAA=</HashCode>
       <FileName>Domain\Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Field Name="_warehouses" />
-      <Field Name="_switches" />
+      <Field Name="_Vehicles" />
+      <Field Name="_Switches" />
+      <Field Name="_WareHouse" />
       <Property Name="Row1" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Goudkoorts_Code.Domain.BaseSwitch">
-    <Position X="7" Y="5" Width="1.5" />
+    <Position X="7" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="Goudkoorts_Code.Domain.BaseRail" FixedToPoint="true">
+      <Path>
+        <Point X="10" Y="2.25" />
+        <Point X="10" Y="1.062" />
+        <Point X="8.5" Y="1.062" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\BaseSwitch.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.Domain.WareHouse">
-    <Position X="7" Y="2" Width="1.5" />
-    <InheritanceLine Type="Goudkoorts_Code.Domain.BaseRail" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="10.5" Y="2.602" />
-        <Point X="10.125" Y="2.602" />
-        <Point X="10.125" Y="2.625" />
-        <Point X="8.5" Y="2.625" />
-      </Path>
-    </InheritanceLine>
+    <Position X="7" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEACA=</HashCode>
       <FileName>Domain\WareHouse.cs</FileName>

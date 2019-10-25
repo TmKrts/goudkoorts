@@ -23,7 +23,6 @@ namespace Goudkoorts_Code.Domain
                     movable.Load--;
                     Controller.Score++;
                 }
-
                 Vehicle = movable;
                 movable.onTrack.Vehicle = null;
                 movable.onTrack = this;

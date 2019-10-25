@@ -3,54 +3,57 @@
   <Class Name="Goudkoorts_Code.View.InputView">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.View.OutputView">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <HashCode>AAAAAQAAAIAAgAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.Process.Controller">
-    <Position X="5.5" Y="2.5" Width="1.5" />
-    <AssociationLine Name="outputView" Type="Goudkoorts_Code.View.OutputView" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <AssociationLine Name="_InputView" Type="Goudkoorts_Code.View.InputView" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="7" Y="3.232" />
-        <Point X="8.188" Y="3.232" />
-        <Point X="8.188" Y="1.796" />
+        <Point X="6.625" Y="2.25" />
+        <Point X="6.625" Y="1.062" />
+        <Point X="5.5" Y="1.062" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.053" Y="0.11" />
+        <Position X="0.06" Y="0.143" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="map" Type="Goudkoorts_Code.Domain.Map">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.672" Y="0.06" />
-      </MemberNameLabel>
+    <AssociationLine Name="_OutputView" Type="Goudkoorts_Code.View.OutputView" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="2.25" />
+        <Point X="7" Y="1.062" />
+        <Point X="8" Y="1.062" />
+      </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAEAAAACAAAAgAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAgAAgAAAAAAAAAAAAYAAAAACAUBCAAAAA=</HashCode>
       <FileName>Process\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="outputView" />
-      <Field Name="map" />
+      <Field Name="_InputView" />
+      <Field Name="_OutputView" />
+      <Field Name="_Map" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Goudkoorts_Code.Program">
-    <Position X="0.5" Y="2.75" Width="1.5" />
+    <Position X="2.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Process\Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.Domain.Map" Collapsed="true">
-    <Position X="5.5" Y="5.75" Width="1.5" />
+    <Position X="6" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAQAAAAAAAAAAAAAAAAA8AMAAAAAAAABAAACAAA=</HashCode>
+      <HashCode>AAAAAAAAEAIAAAAAAEAAQgAA8AEIAAAAAAABAAAACAA=</HashCode>
       <FileName>Domain\Map.cs</FileName>
     </TypeIdentifier>
   </Class>

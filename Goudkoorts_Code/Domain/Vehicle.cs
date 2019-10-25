@@ -11,6 +11,7 @@ namespace Goudkoorts_Code.Domain
         public BaseRail onTrack;
 
         public abstract char Print();
+
         public abstract bool Move();
     }
 }

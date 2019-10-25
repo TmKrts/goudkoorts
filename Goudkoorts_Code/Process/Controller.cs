@@ -109,7 +109,7 @@ namespace Goudkoorts_Code.Process
             _OutputView.PrintControls();
             if (_Buffer > 1500)
             {
-                _Buffer -= 100; // Fast as **** BOI
+                _Buffer -= 100;
             }
             _Playing = true;
             Start();

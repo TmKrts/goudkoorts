@@ -209,7 +209,7 @@ namespace Goudkoorts_Code.Domain
             NR41.Next = NR42;
             ParkRail PR8 = new ParkRail();
             PR7.Next = PR8;
-
+            
             // fill shiproute
             _Channels[0] = W1;
             _Channels[1] = W2;
@@ -219,7 +219,7 @@ namespace Goudkoorts_Code.Domain
             _Channels[5] = W6;
             _Channels[6] = W7;
             _Channels[7] = W8;
-
+            
             //fill switches list
             _Switches[0] = S1;
             _Switches[1] = S2;
@@ -338,11 +338,13 @@ namespace Goudkoorts_Code.Domain
             }
             return true;
         }
+
         public void SpawnCart()
         {
             int RandomNumber = r.Next(3);
             _Vehicles.Add(_WareHouse[RandomNumber].SpawnMineCart());
         }
+
         public void SpawnShip()
         {
             int randomNumber = r.Next(9);
