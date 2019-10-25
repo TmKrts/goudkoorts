@@ -9,6 +9,6 @@ namespace Goudkoorts_Code.Domain
     {
         public override abstract bool MoveToThis(Vehicle movable);
         public override abstract char Print();
-        public abstract void SwitchSwitch();
+        public abstract void DoSwitch();
     }
 }

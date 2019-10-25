@@ -35,12 +35,38 @@ namespace Goudkoorts_Code.Domain
 
         public override char Print()
         {
-            return 'p';
+            if (Vehicle != null)
+            {
+                return Vehicle.Print();
+            }
+            if (Previous == _previousDown)
+            {
+                return '╔';
+            }
+            if (Previous == _previousUp)
+            {
+                return '╚';
+            }
+            return 'Q';
         }
 
-        public override void SwitchSwitch()
+        public override void DoSwitch()
         {
-            throw new NotImplementedException();
+            if (Vehicle == null)
+            {
+                if (Previous == _prevUp)
+                {
+                    _prevUp.Next = null;
+                    _prevDown.Next = this;
+                    Previous = _prevDown;
+                }
+                else
+                {
+                    _prevDown.Next = null;
+                    _prevUp.Next = this;
+                    Previous = _prevUp;
+                }
+            }            
         }
     }
 }

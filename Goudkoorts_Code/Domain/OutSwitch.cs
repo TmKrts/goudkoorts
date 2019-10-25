@@ -16,27 +16,49 @@ namespace Goudkoorts_Code.Domain
             _nextDown = nextDown;
         }
 
-        public override bool MoveToThis(Vehicle movable)
+        public override bool MoveToThis(Vehicle vehicle)
         {
             if (Vehicle == null)
             {
-                Vehicle = movable;
-                movable.onTrack.Vehicle = null;
-                movable.onTrack = this;
+                Vehicle = vehicle;
+                vehicle.onTrack.Vehicle = null;
+                vehicle.onTrack = this;
                 return true;
             }
-
             return false;
         }
 
         public override char Print()
         {
-            return 'o';
+            if (Movable != null)
+            {
+                return Vehicle.Print();
+            }
+            if (Next == _nextUp)
+            {
+                return '╝';
+            }
+            if (Next == _nextDown)
+            {
+                return '╗';
+            }
+            return 'S';
         }
+        
 
-        public override void SwitchSwitch()
+        public override void DoSwitch()
         {
-            throw new NotImplementedException();
+            if(Vehicle == null) 
+            {
+                if(Next == _nextUp) 
+                {
+                    Next = _nextDown;
+                }
+                else 
+                {
+                    Next = _nextUp;
+                }
+            }
         }
     }
 }

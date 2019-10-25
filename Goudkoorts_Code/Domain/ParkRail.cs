@@ -6,16 +6,15 @@ namespace Goudkoorts_Code.Domain
 {
     class ParkRail : BaseRail
     {
-        public override bool MoveToThis(Vehicle movable)
+        public override bool MoveToThis(Vehicle vehicle)
         {
-            if (Vehicle == null)
+            if (vehicle == null)
             {
-                Vehicle = movable;
-                movable.onTrack.Vehicle = null;
-                movable.onTrack = this;
+                vehicle = movable;
+                vehicle.onTrack.Vehicle = null;
+                vehicle.onTrack = this;
                 return true;
             }
-
             return true;
         }
 
