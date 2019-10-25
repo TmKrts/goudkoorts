@@ -12,7 +12,7 @@ namespace Goudkoorts_Code.Process
         private InputView _InputView;
         private OutputView _OutputView;
         private Map _Map;
-        private int _Buffer = 1000;
+        private int _Buffer = 2000;
         private Timer _Timer;
         private bool _Playing;
         public static int Score;
@@ -34,6 +34,7 @@ namespace Goudkoorts_Code.Process
 
         public void Start()
         {
+            
             _Timer.Interval = _Buffer;
             _Timer.Enabled = true;
             while (_Playing)
@@ -106,7 +107,7 @@ namespace Goudkoorts_Code.Process
             _OutputView.PrintControls();
             if(_Buffer > 1500)
             {
-                _Buffer -= 100;
+                _Buffer -= 100; // Fast as **** BOI
             }
         }
 
