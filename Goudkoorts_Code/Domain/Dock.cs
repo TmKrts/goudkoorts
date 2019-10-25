@@ -9,7 +9,7 @@ namespace Goudkoorts_Code.Domain
     {
         public override bool MoveToThis(Vehicle vehicle)
         {
-            if (vehicle.Load == 8) // checken of dit kan
+            if (vehicle.Load == 8) 
             {
                 Controller.Score += 10;
                 Vehicle = vehicle;

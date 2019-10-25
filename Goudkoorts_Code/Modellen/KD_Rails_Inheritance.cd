@@ -12,35 +12,42 @@
     <InheritanceLine Type="Goudkoorts_Code.Domain.BaseRail" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="11.5" Y="4.172" />
-        <Point X="13.16" Y="4.172" />
-        <Point X="13.16" Y="5.008" />
-        <Point X="14" Y="5.008" />
+        <Point X="13.254" Y="4.172" />
+        <Point X="13.254" Y="4.833" />
+        <Point X="14" Y="4.833" />
         <Point X="14" Y="5.5" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Domain\NormalRail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.Domain.BaseSwitch">
     <Position X="13.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\BaseSwitch.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.Domain.OutSwitch">
-    <Position X="17" Y="4" Width="1.5" />
+    <Position X="17" Y="4.25" Width="1.5" />
+    <InheritanceLine Type="Goudkoorts_Code.Domain.BaseSwitch" FixedFromPoint="true">
+      <Path>
+        <Point X="15" Y="3.875" />
+        <Point X="17.75" Y="3.875" />
+        <Point X="17.75" Y="4.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAAAABCAAACAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAACAAACAAAAAAAAAAEAAA=</HashCode>
       <FileName>Domain\OutSwitch.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.Domain.EndRail">
     <Position X="15.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\EndRail.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -67,7 +74,7 @@
   <Class Name="Goudkoorts_Code.Domain.InSwitch">
     <Position X="18.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAEAAAAgAAAAAAAAgBAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAIAAAAAEAAAAgAAAAAAAAgAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Domain\InSwitch.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -77,12 +84,12 @@
       <Path>
         <Point X="10" Y="4.699" />
         <Point X="9.129" Y="4.699" />
-        <Point X="9.129" Y="5.5" />
-        <Point X="6.75" Y="5.5" />
+        <Point X="9.129" Y="5.466" />
+        <Point X="6.75" Y="5.466" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Domain\ParkRail.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -92,27 +99,19 @@
       <Path>
         <Point X="11.5" Y="4.523" />
         <Point X="12.92" Y="4.523" />
-        <Point X="12.92" Y="7.963" />
-        <Point X="13.25" Y="7.963" />
+        <Point X="12.92" Y="7.867" />
+        <Point X="13.25" Y="7.867" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Domain\Channel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.Domain.ChannelEnd">
-    <Position X="13.25" Y="9" Width="1.5" />
-    <InheritanceLine Type="Goudkoorts_Code.Domain.BaseRail" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="11.5" Y="4.875" />
-        <Point X="12.616" Y="4.875" />
-        <Point X="12.616" Y="9.25" />
-        <Point X="13.25" Y="9.25" />
-      </Path>
-    </InheritanceLine>
+    <Position X="15.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domain\ChannelEnd.cs</FileName>
     </TypeIdentifier>
   </Class>
