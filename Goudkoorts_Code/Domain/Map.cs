@@ -7,10 +7,10 @@ namespace Goudkoorts_Code.Domain
 {
     class Map
     {
-        private WareHouse[] SpawnPoints;
-        private BaseSwitch[] Switches;
-        private List<Vehicle> Vehicles;
-        private BaseRail[] ShipRoute;
+        private WareHouse[] _warehouses;
+        private BaseSwitch[] _switches;
+        private List<Vehicle> _vehicles;
+        private BaseRail[] _channels;
         private Random r;
 
         public BaseRail[] Row1 { get; }
@@ -21,10 +21,10 @@ namespace Goudkoorts_Code.Domain
 
         public Map()
         {
-            Switches = new BaseSwitch[5];
-            SpawnPoints = new WareHouse[3];
-            Vehicles = new List<Vehicle>();
-            ShipRoute = new BaseRail[8];
+            _switches = new BaseSwitch[5];
+            _warehouses = new WareHouse[3];
+            _vehicles = new List<Vehicle>();
+            _channels = new BaseRail[8];
             r = new Random();
 
             Row1 = new BaseRail[23];
@@ -37,9 +37,9 @@ namespace Goudkoorts_Code.Domain
             WareHouse WHA = new WareHouse();
             WareHouse WHB = new WareHouse();
             WareHouse WHC = new WareHouse();
-            SpawnPoints[0] = WHA;
-            SpawnPoints[1] = WHB;
-            SpawnPoints[2] = WHC;
+            _warehouses[0] = WHA;
+            _warehouses[1] = WHB;
+            _warehouses[2] = WHC;
 
             NormalRail NR1 = new NormalRail();
             WHA.Next = NR1;
@@ -66,13 +66,12 @@ namespace Goudkoorts_Code.Domain
             S1.Previous = NR8;
             NR8.Next = S1;
 
-            // column 4
+            // column 4 and 5
             NormalRail NR10 = new NormalRail();
             S1.Next = NR10;
             NormalRail NR11 = new NormalRail();
             NR9.Next = NR11;
 
-            // column 5
             NormalRail NR12 = new NormalRail();
             NormalRail NR13 = new NormalRail();
             NormalRail NR14 = new NormalRail();
@@ -94,13 +93,12 @@ namespace Goudkoorts_Code.Domain
             NR16.Next = S3;
             S3.Previous = NR16;
 
-            // column 7
+            // column 7 and 8
             NormalRail NR18 = new NormalRail();
             NR15.Next = NR18;
             NormalRail NR19 = new NormalRail();
             S3.Next = NR19;
 
-            // column 8
             NormalRail NR20 = new NormalRail();
             NR18.Next = NR20;
             NormalRail NR21 = new NormalRail();
@@ -122,32 +120,29 @@ namespace Goudkoorts_Code.Domain
             S5.Previous = NR23;
             NR23.Next = S5;
 
-            // column 10
+            // column 10, 11 and 12
             NormalRail NR26 = new NormalRail();
             S5.Next = NR26;
             NormalRail NR27 = new NormalRail();
             NR25.Next = NR27;
 
-            // column 11
             NormalRail NR28 = new NormalRail();
             NR26.Next = NR28;
             NormalRail NR29 = new NormalRail();
             NR27.Next = NR29;
 
-            // column 12
             NormalRail NR30 = new NormalRail();
             NR28.Next = NR30;
             NormalRail NR31 = new NormalRail();
             NR29.Next = NR31;
 
-            // column 13
+            // column 13 and 14 the firts channel_piece
             Channel W1 = new Channel();
             NormalRail NR32 = new NormalRail();
             NR30.Next = NR32;
             NormalRail NR33 = new NormalRail();
             NR31.Next = NR33;
 
-            // column 14
             Channel W2 = new Channel();
             W1.Next = W2;
             NormalRail NR34 = new NormalRail();
@@ -155,7 +150,7 @@ namespace Goudkoorts_Code.Domain
             NormalRail NR35 = new NormalRail();
             NR33.Next = NR35;
 
-            // column 15
+            // column 15 the first parkRail
             Channel W3 = new Channel();
             W2.Next = W3;
             NormalRail NR36 = new NormalRail();
@@ -163,7 +158,7 @@ namespace Goudkoorts_Code.Domain
             ParkRail PR1 = new ParkRail();
             NR35.Next = PR1;
 
-            // column 16
+            // column 16 the dock and quay
             Dock W4 = new Dock();
             W3.Next = W4;
             Quay quay = new Quay();
@@ -172,7 +167,7 @@ namespace Goudkoorts_Code.Domain
             ParkRail PR2 = new ParkRail();
             PR1.Next = PR2;
 
-            // column 17
+            // column 17 till end
             Channel W5 = new Channel();
             W4.Next = W5;
             NormalRail NR37 = new NormalRail();
@@ -180,7 +175,6 @@ namespace Goudkoorts_Code.Domain
             ParkRail PR3 = new ParkRail();
             PR2.Next = PR3;
 
-            // column 18
             Channel W6 = new Channel();
             W5.Next = W6;
             NormalRail NR38 = new NormalRail();
@@ -188,7 +182,6 @@ namespace Goudkoorts_Code.Domain
             ParkRail PR4 = new ParkRail();
             PR3.Next = PR4;
 
-            // column 19
             Channel W7 = new Channel();
             W6.Next = W7;
             NormalRail NR39 = new NormalRail();
@@ -196,7 +189,6 @@ namespace Goudkoorts_Code.Domain
             ParkRail PR5 = new ParkRail();
             PR4.Next = PR5;
 
-            // column 20
             Channel W8 = new Channel();
             W7.Next = W8;
             NormalRail NR40 = new NormalRail();
@@ -204,7 +196,6 @@ namespace Goudkoorts_Code.Domain
             ParkRail PR6 = new ParkRail();
             PR5.Next = PR6;
 
-            // column 21
             Channel W9 = new Channel();
             W8.Next = W9;
             NormalRail NR41 = new NormalRail();
@@ -212,29 +203,29 @@ namespace Goudkoorts_Code.Domain
             ParkRail PR7 = new ParkRail();
             PR6.Next = PR7;
 
-            // column 22
             Channel W10 = new Channel();
             W9.Next = W10;
             NormalRail NR42 = new NormalRail();
             NR41.Next = NR42;
-            ParkRail SH8 = new ParkRail();
-            PR7.Next = SH8;
+            ParkRail PR8 = new ParkRail();
+            PR7.Next = PR8;
 
-            ShipRoute[0] = W1;
-            ShipRoute[1] = W2;
-            ShipRoute[2] = W3;
-            ShipRoute[3] = W4;
-            ShipRoute[4] = W5;
-            ShipRoute[5] = W6;
-            ShipRoute[6] = W7;
-            ShipRoute[7] = W8;
+            // fill shiproute
+            _channels[0] = W1;
+            _channels[1] = W2;
+            _channels[2] = W3;
+            _channels[3] = W4;
+            _channels[4] = W5;
+            _channels[5] = W6;
+            _channels[6] = W7;
+            _channels[7] = W8;
 
             //fill switches list
-            Switches[0] = S1;
-            Switches[1] = S2;
-            Switches[2] = S3;
-            Switches[3] = S4;
-            Switches[4] = S5;
+            _switches[0] = S1;
+            _switches[1] = S2;
+            _switches[2] = S3;
+            _switches[3] = S4;
+            _switches[4] = S5;
 
             //fill rows
             Row1[0] = WHA;
@@ -328,15 +319,17 @@ namespace Goudkoorts_Code.Domain
             Row5[19] = PR5;
             Row5[20] = PR6;
             Row5[21] = PR7;
-            Row5[22] = SH8;
+            Row5[22] = PR8;
         }
+
         public void DoSwitch(int R)
         {
-            Switches[R - 1].DoSwitch();
+            _switches[R - 1].DoSwitch();
         }
+
         public bool MoveVehicles()
         {
-            foreach(Vehicle v in Vehicles)
+            foreach(Vehicle v in _vehicles)
             {
                 if(!v.Move())
                 {
@@ -348,16 +341,16 @@ namespace Goudkoorts_Code.Domain
         public void SpawnCart()
         {
             int RandomNumber = r.Next(3);
-            Vehicles.Add(SpawnPoints[RandomNumber].SpawnMineCart());
+            _vehicles.Add(_warehouses[RandomNumber].SpawnMineCart());
         }
         public void SpawnShip()
         {
             int randomNumber = r.Next(9);
             if(randomNumber == 1)
             {
-                ShipRoute[0].Vehicle = new Boat();
-                ShipRoute[0].Vehicle.onTrack = ShipRoute[0];
-                Vehicles.Add(ShipRoute[0].Vehicle);
+                _channels[0].Vehicle = new Boat();
+                _channels[0].Vehicle.onTrack = _channels[0];
+                _vehicles.Add(_channels[0].Vehicle);
             }
         }
     }
