@@ -7,7 +7,17 @@ namespace Goudkoorts_Code.Domain
 {
     public abstract class BaseSwitch : BaseRail
     {
-        public override abstract bool MoveToThis(Vehicle movable);
+        public override bool MoveToThis(Vehicle vehicle)
+        {
+            if (vehicle == null)
+            {
+                Vehicle = vehicle;
+                vehicle.onTrack.Vehicle = null;
+                vehicle.onTrack = this;
+                return true;
+            }
+            return false;
+        }
 
         public abstract void DoSwitch();
     }
