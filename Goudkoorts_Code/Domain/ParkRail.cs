@@ -10,7 +10,7 @@ namespace Goudkoorts_Code.Domain
         {
             if (vehicle == null)
             {
-                vehicle = movable;
+                Vehicle = vehicle;
                 vehicle.onTrack.Vehicle = null;
                 vehicle.onTrack = this;
                 return true;

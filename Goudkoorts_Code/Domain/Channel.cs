@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Goudkoorts_Code.Domain
 {
-    class Channel_Piece : BaseRail
+    class Channel : BaseRail
     {
         public override bool MoveToThis(Vehicle vehicle)
         {

@@ -30,7 +30,7 @@ namespace Goudkoorts_Code.Domain
 
         public override char Print()
         {
-            if (Movable != null)
+            if (Vehicle != null)
             {
                 return Vehicle.Print();
             }

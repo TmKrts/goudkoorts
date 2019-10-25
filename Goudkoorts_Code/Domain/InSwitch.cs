@@ -54,17 +54,17 @@ namespace Goudkoorts_Code.Domain
         {
             if (Vehicle == null)
             {
-                if (Previous == _prevUp)
+                if (Previous == _previousUp)
                 {
-                    _prevUp.Next = null;
-                    _prevDown.Next = this;
-                    Previous = _prevDown;
+                    _previousUp.Next = null;
+                    _previousDown.Next = this;
+                    Previous = _previousDown;
                 }
                 else
                 {
-                    _prevDown.Next = null;
-                    _prevUp.Next = this;
-                    Previous = _prevUp;
+                    _previousDown.Next = null;
+                    _previousUp.Next = this;
+                    Previous = _previousUp;
                 }
             }            
         }
