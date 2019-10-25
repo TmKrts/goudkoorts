@@ -40,7 +40,8 @@ namespace Goudkoorts_Code.View
                         result = 5;
                         pressed = true;
                         break;
-                    default:                        
+                    default:
+                        pressed = false;
                         break;
                 }
             }
