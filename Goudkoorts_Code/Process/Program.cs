@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Goudkoorts_Code.Process;
+using System;
 
 namespace Goudkoorts_Code
 {
@@ -6,7 +7,7 @@ namespace Goudkoorts_Code
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            new Controller().Start();
         }
     }
 }
