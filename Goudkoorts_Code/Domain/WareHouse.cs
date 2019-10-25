@@ -6,7 +6,7 @@ namespace Goudkoorts_Code.Domain
 {
     class WareHouse : BaseRail
     {
-        public override bool MoveToThis(Vehicle movable)
+        public override bool MoveToThis(Vehicle vehicle)
         {
             return false;
         }

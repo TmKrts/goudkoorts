@@ -61,7 +61,7 @@ namespace Goudkoorts_Code.View
         {
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("Press 1-5 to switch to switch switches (direction left-right, first from the left is 1 etc.)");
+            Console.WriteLine("Press 1-5 to switch the switches");
             Console.WriteLine("Or press S to stop");
         }
 
