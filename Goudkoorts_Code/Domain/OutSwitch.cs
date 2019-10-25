@@ -28,6 +28,21 @@ namespace Goudkoorts_Code.Domain
             return false;
         }
 
+        public override void DoSwitch()
+        {
+            if (Vehicle == null)
+            {
+                if (Next == _nextUp)
+                {
+                    Next = _nextDown;
+                }
+                else
+                {
+                    Next = _nextUp;
+                }
+            }
+        }
+
         public override char Print()
         {
             if (Vehicle != null)
@@ -43,22 +58,6 @@ namespace Goudkoorts_Code.Domain
                 return '╗';
             }
             return 'S';
-        }
-        
-
-        public override void DoSwitch()
-        {
-            if(Vehicle == null) 
-            {
-                if(Next == _nextUp) 
-                {
-                    Next = _nextDown;
-                }
-                else 
-                {
-                    Next = _nextUp;
-                }
-            }
         }
     }
 }

@@ -1,66 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Goudkoorts_Code.Domain.Game" Collapsed="true">
-    <Position X="1" Y="2.25" Width="1.5" />
+  <Class Name="Goudkoorts_Code.Domain.Vehicle">
+    <Position X="3.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Domain\Game.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Goudkoorts_Code.Domain.Vehicle" Collapsed="true">
-    <Position X="5.5" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAEAAA=</HashCode>
       <FileName>Domain\Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Goudkoorts_Code.Domain.BaseRail" Collapsed="true">
-    <Position X="12" Y="0.5" Width="1.5" />
+  <Class Name="Goudkoorts_Code.Domain.BaseRail">
+    <Position X="10.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Domain\BaseRail.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Goudkoorts_Code.Domain.Cart" Collapsed="true">
-    <Position X="4" Y="2.25" Width="1.5" />
+  <Class Name="Goudkoorts_Code.Domain.Map">
+    <Position X="3.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Domain\Cart.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Goudkoorts_Code.Domain.Boat" Collapsed="true">
-    <Position X="6.75" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Domain\Boat.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Goudkoorts_Code.Domain.ParkRail" Collapsed="true">
-    <Position X="9.25" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Domain\ParkRail.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Goudkoorts_Code.Domain.NormalRail" Collapsed="true">
-    <Position X="14.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Domain\NormalRail.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Goudkoorts_Code.Domain.TurnRail" Collapsed="true">
-    <Position X="12" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Domain\TurnRail.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Goudkoorts_Code.Domain.Map" Collapsed="true">
-    <Position X="3" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AEAAAAQAAAAAAAAAAAAAAAAA8AMAAAAAAAABAAACAAA=</HashCode>
       <FileName>Domain\Map.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_warehouses" />
+      <Field Name="_switches" />
+      <Property Name="Row1" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Goudkoorts_Code.Domain.BaseSwitch">
+    <Position X="7" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\BaseSwitch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts_Code.Domain.WareHouse">
+    <Position X="7" Y="2" Width="1.5" />
+    <InheritanceLine Type="Goudkoorts_Code.Domain.BaseRail" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.5" Y="2.602" />
+        <Point X="10.125" Y="2.602" />
+        <Point X="10.125" Y="2.625" />
+        <Point X="8.5" Y="2.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEACA=</HashCode>
+      <FileName>Domain\WareHouse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

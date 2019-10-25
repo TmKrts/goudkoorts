@@ -8,31 +8,50 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.View.OutputView">
-    <Position X="7" Y="0.5" Width="1.5" />
+    <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Goudkoorts_Code.Process.Controller">
     <Position X="5.5" Y="2.5" Width="1.5" />
+    <AssociationLine Name="outputView" Type="Goudkoorts_Code.View.OutputView" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="3.232" />
+        <Point X="8.188" Y="3.232" />
+        <Point X="8.188" Y="1.796" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.053" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="map" Type="Goudkoorts_Code.Domain.Map">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.672" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAIAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAACAAAAgAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Process\Controller.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="outputView" />
+      <Field Name="map" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="Goudkoorts_Code.Program" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+  <Class Name="Goudkoorts_Code.Program">
+    <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Process\Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Goudkoorts_Code.Domain.Game">
-    <Position X="5.5" Y="5" Width="1.5" />
+  <Class Name="Goudkoorts_Code.Domain.Map" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Domain\Game.cs</FileName>
+      <HashCode>AEAAAAQAAAAAAAAAAAAAAAAA8AMAAAAAAAABAAACAAA=</HashCode>
+      <FileName>Domain\Map.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

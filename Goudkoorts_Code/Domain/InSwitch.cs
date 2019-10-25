@@ -21,6 +21,7 @@ namespace Goudkoorts_Code.Domain
             _previousUp = previousrailUp;
             _previousDown = previousRailDown;
         }
+
         public override bool MoveToThis(Vehicle vehicle)
         {
             if (Vehicle == null)
@@ -31,23 +32,6 @@ namespace Goudkoorts_Code.Domain
                 return true;
             }
             return false;
-        }
-
-        public override char Print()
-        {
-            if (Vehicle != null)
-            {
-                return Vehicle.Print();
-            }
-            if (Previous == _previousDown)
-            {
-                return '╔';
-            }
-            if (Previous == _previousUp)
-            {
-                return '╚';
-            }
-            return 'Q';
         }
 
         public override void DoSwitch()
@@ -66,7 +50,24 @@ namespace Goudkoorts_Code.Domain
                     _previousUp.Next = this;
                     Previous = _previousUp;
                 }
-            }            
+            }
+        }
+
+        public override char Print()
+        {
+            if (Vehicle != null)
+            {
+                return Vehicle.Print();
+            }
+            if (Previous == _previousDown)
+            {
+                return '╔';
+            }
+            if (Previous == _previousUp)
+            {
+                return '╚';
+            }
+            return 'Q';
         }
     }
 }

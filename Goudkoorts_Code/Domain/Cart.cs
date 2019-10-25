@@ -20,6 +20,7 @@ namespace Goudkoorts_Code.Domain
             }
             return false;
         }
+
         public override char Print()
         {
             if (Load == 0)

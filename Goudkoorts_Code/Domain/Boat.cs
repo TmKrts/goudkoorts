@@ -10,6 +10,7 @@ namespace Goudkoorts_Code.Domain
         {
             Load = 0;       
         }
+
         public override bool Move()
         {
             if (onTrack == null || onTrack.Next == null || onTrack.Next.MoveToThis(this))
@@ -18,6 +19,7 @@ namespace Goudkoorts_Code.Domain
             }
             return true;
         }
+
         public override char Print()
         {
             if(Load == 0)
