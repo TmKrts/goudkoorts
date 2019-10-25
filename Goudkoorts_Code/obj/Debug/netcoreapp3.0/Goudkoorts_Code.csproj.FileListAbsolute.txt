@@ -8,3 +8,4 @@ C:\Users\TKaer\Documents\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3
 C:\Users\TKaer\Documents\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.AssemblyInfo.cs
 C:\Users\TKaer\Documents\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.dll
 C:\Users\TKaer\Documents\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.pdb
+C:\Users\TKaer\Documents\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.csprojAssemblyReference.cache
