@@ -7,10 +7,10 @@ namespace Goudkoorts_Code.Domain
 {
     class Map
     {
-        private WareHouse[] _warehouses;
-        private BaseSwitch[] _switches;
-        private List<Vehicle> _vehicles;
-        private BaseRail[] _channels;
+        private WareHouse[] _WareHouse;
+        private BaseSwitch[] _Switches;
+        private List<Vehicle> _Vehicles;
+        private BaseRail[] _Channels;
         private Random r;
 
         public BaseRail[] Row1 { get; }
@@ -21,10 +21,10 @@ namespace Goudkoorts_Code.Domain
 
         public Map()
         {
-            _switches = new BaseSwitch[5];
-            _warehouses = new WareHouse[3];
-            _vehicles = new List<Vehicle>();
-            _channels = new BaseRail[8];
+            _Switches = new BaseSwitch[5];
+            _WareHouse = new WareHouse[3];
+            _Vehicles = new List<Vehicle>();
+            _Channels = new BaseRail[8];
             r = new Random();
 
             Row1 = new BaseRail[23];
@@ -37,9 +37,9 @@ namespace Goudkoorts_Code.Domain
             WareHouse WHA = new WareHouse();
             WareHouse WHB = new WareHouse();
             WareHouse WHC = new WareHouse();
-            _warehouses[0] = WHA;
-            _warehouses[1] = WHB;
-            _warehouses[2] = WHC;
+            _WareHouse[0] = WHA;
+            _WareHouse[1] = WHB;
+            _WareHouse[2] = WHC;
 
             NormalRail NR1 = new NormalRail();
             WHA.Next = NR1;
@@ -211,21 +211,21 @@ namespace Goudkoorts_Code.Domain
             PR7.Next = PR8;
 
             // fill shiproute
-            _channels[0] = W1;
-            _channels[1] = W2;
-            _channels[2] = W3;
-            _channels[3] = W4;
-            _channels[4] = W5;
-            _channels[5] = W6;
-            _channels[6] = W7;
-            _channels[7] = W8;
+            _Channels[0] = W1;
+            _Channels[1] = W2;
+            _Channels[2] = W3;
+            _Channels[3] = W4;
+            _Channels[4] = W5;
+            _Channels[5] = W6;
+            _Channels[6] = W7;
+            _Channels[7] = W8;
 
             //fill switches list
-            _switches[0] = S1;
-            _switches[1] = S2;
-            _switches[2] = S3;
-            _switches[3] = S4;
-            _switches[4] = S5;
+            _Switches[0] = S1;
+            _Switches[1] = S2;
+            _Switches[2] = S3;
+            _Switches[3] = S4;
+            _Switches[4] = S5;
 
             //fill rows
             Row1[0] = WHA;
@@ -324,12 +324,12 @@ namespace Goudkoorts_Code.Domain
 
         public void DoSwitch(int R)
         {
-            _switches[R - 1].DoSwitch();
+            _Switches[R - 1].DoSwitch();
         }
 
         public bool MoveVehicles()
         {
-            foreach(Vehicle v in _vehicles)
+            foreach(Vehicle v in _Vehicles)
             {
                 if(!v.Move())
                 {
@@ -341,16 +341,16 @@ namespace Goudkoorts_Code.Domain
         public void SpawnCart()
         {
             int RandomNumber = r.Next(3);
-            _vehicles.Add(_warehouses[RandomNumber].SpawnMineCart());
+            _Vehicles.Add(_WareHouse[RandomNumber].SpawnMineCart());
         }
         public void SpawnShip()
         {
             int randomNumber = r.Next(9);
             if(randomNumber == 1)
             {
-                _channels[0].Vehicle = new Boat();
-                _channels[0].Vehicle.onTrack = _channels[0];
-                _vehicles.Add(_channels[0].Vehicle);
+                _Channels[0].Vehicle = new Boat();
+                _Channels[0].Vehicle.onTrack = _Channels[0];
+                _Vehicles.Add(_Channels[0].Vehicle);
             }
         }
     }
