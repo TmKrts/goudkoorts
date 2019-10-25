@@ -21,6 +21,16 @@ namespace Goudkoorts_Code.Domain
 
         public abstract char Print();
 
-        public abstract bool MoveToThis(Vehicle vehicle);
+        public virtual bool MoveToThis(Vehicle vehicle)
+        {
+            if (Vehicle == null)
+            {
+                Vehicle = vehicle;
+                vehicle.onTrack.Vehicle = null;
+                vehicle.onTrack = this;
+                return true;
+            }
+            return false;
+        }
     }
 }
