@@ -33,8 +33,7 @@ namespace Goudkoorts_Code.Process
         }
 
         public void Start()
-        {
-            
+        {  
             _Timer.Interval = _Buffer;
             _Timer.Enabled = true;
             while (_Playing)
@@ -78,50 +77,40 @@ namespace Goudkoorts_Code.Process
                 }
             }
         }
-
-        private void TimerEnd()
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
             _Playing = false;
             _Timer.Enabled = false;
 
             bool notCrashed = _Map.MoveVehicles();
-            if(!notCrashed)
+            if (!notCrashed)
             {
-                CollisionTriggerd();
+                _Timer.Enabled = false;
+                _OutputView.ShowEndScreen();
+                Console.ReadKey();
+                Environment.Exit(0);
             }
             _OutputView.DrawMap(_Map, Score);
             _Map.SpawnShip();
-            if(Score > 17)
+            if (Score > 17)
             {
                 _Map.SpawnCart();
-            } else
+            }
+            else
             {
                 Random r = new Random();
                 int i = r.Next(3);
-                if(i == 0)
+                if (i == 0)
                 {
                     _Map.SpawnCart();
                 }
             }
             _OutputView.DrawMap(_Map, Score);
             _OutputView.PrintControls();
-            if(_Buffer > 1500)
+            if (_Buffer > 1500)
             {
                 _Buffer -= 100; // Fast as **** BOI
             }
-        }
-
-        private void CollisionTriggerd()
-        {
-            _Timer.Enabled = false;
-            _OutputView.ShowEndScreen();
-            Console.ReadKey();
-            Environment.Exit(0);
-        }
-
-        private void OnTimedEvent(object source, ElapsedEventArgs e)
-        {
-            TimerEnd();
             _Playing = true;
             Start();
         }
