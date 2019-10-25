@@ -203,9 +203,9 @@ namespace Goudkoorts_Code.Domain
             ParkRail PR7 = new ParkRail();
             PR6.Next = PR7;
 
-            Channel W10 = new Channel();
+            EndChannel W10 = new EndChannel();
             W9.Next = W10;
-            NormalRail NR42 = new NormalRail();
+            EndRail NR42 = new EndRail();
             NR41.Next = NR42;
             ParkRail PR8 = new ParkRail();
             PR7.Next = PR8;
