@@ -33,7 +33,7 @@ namespace Goudkoorts_Code.View
         {
             Console.Clear();
             Console.WriteLine("GOUDKOORTS");
-            Console.WriteLine("Your score: " + 0); //proberen score te binden ;)
+            Console.WriteLine("Your score: " + score);
             Console.WriteLine();
             foreach (BaseRail baseRail in map.Row1)
             {
@@ -59,6 +59,17 @@ namespace Goudkoorts_Code.View
             {
                 Console.Write(baseRail.Print());
             }
+        }
+        public void PrintControls()
+        {
+            Console.WriteLine("Press 1-5 to switch to switch switches (direction left-right, first from the left is 1 etc.)");
+            Console.WriteLine("Or press S to stop");
+        }
+
+        public void ShowEndScreen()
+        {
+            Console.WriteLine("A cart has crashed into another one! You died.");
+            Console.WriteLine("Press S to exit");
         }
     }
 }
