@@ -9,3 +9,14 @@ C:\Users\TKaer\Documents\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3
 C:\Users\TKaer\Documents\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.dll
 C:\Users\TKaer\Documents\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.pdb
 C:\Users\TKaer\Documents\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.csprojAssemblyReference.cache
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\bin\Debug\netcoreapp3.0\Goudkoorts_Code.exe
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\bin\Debug\netcoreapp3.0\Goudkoorts_Code.deps.json
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\bin\Debug\netcoreapp3.0\Goudkoorts_Code.runtimeconfig.json
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\bin\Debug\netcoreapp3.0\Goudkoorts_Code.runtimeconfig.dev.json
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\bin\Debug\netcoreapp3.0\Goudkoorts_Code.dll
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\bin\Debug\netcoreapp3.0\Goudkoorts_Code.pdb
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.csprojAssemblyReference.cache
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.AssemblyInfoInputs.cache
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.AssemblyInfo.cs
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.dll
+C:\Users\zkzk\OneDrive\Documenten\GitHub\goudkoorts\Goudkoorts_Code\obj\Debug\netcoreapp3.0\Goudkoorts_Code.pdb
