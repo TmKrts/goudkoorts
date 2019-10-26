@@ -137,88 +137,84 @@ namespace Goudkoorts_Code.Domain
             NR29.Next = NR31;
 
             // column 13 and 14 the firts channel_piece
-            Channel W1 = new Channel();
             NormalRail NR32 = new NormalRail();
             NR30.Next = NR32;
             NormalRail NR33 = new NormalRail();
             NR31.Next = NR33;
 
-            Channel W2 = new Channel();
-            W1.Next = W2;
             NormalRail NR34 = new NormalRail();
             NR32.Next = NR34;
             NormalRail NR35 = new NormalRail();
             NR33.Next = NR35;
 
             // column 15 the first parkRail
-            Channel W3 = new Channel();
-            W2.Next = W3;
+            Channel ch1 = new Channel();
             NormalRail NR36 = new NormalRail();
             NR34.Next = NR36;
             ParkRail PR1 = new ParkRail();
             NR35.Next = PR1;
 
             // column 16 the dock and quay
-            Dock W4 = new Dock();
-            W3.Next = W4;
+            Channel ch2 = new Channel();
+            ch1.Next = ch2;
             Quay quay = new Quay();
-            quay.Dock = W3;
+            quay.Dock = ch2;
             NR36.Next = quay;
             ParkRail PR2 = new ParkRail();
             PR1.Next = PR2;
 
             // column 17 till end
-            Channel W5 = new Channel();
-            W4.Next = W5;
+            Dock ch3 = new Dock();
+            ch2.Next = ch3;
             NormalRail NR37 = new NormalRail();
             quay.Next = NR37;
             ParkRail PR3 = new ParkRail();
             PR2.Next = PR3;
 
-            Channel W6 = new Channel();
-            W5.Next = W6;
+            Channel ch4 = new Channel();
+            ch3.Next = ch4;
             NormalRail NR38 = new NormalRail();
             NR37.Next = NR38;
             ParkRail PR4 = new ParkRail();
             PR3.Next = PR4;
 
-            Channel W7 = new Channel();
-            W6.Next = W7;
+            Channel ch5 = new Channel();
+            ch4.Next = ch5;
             NormalRail NR39 = new NormalRail();
             NR38.Next = NR39;
             ParkRail PR5 = new ParkRail();
             PR4.Next = PR5;
 
-            Channel W8 = new Channel();
-            W7.Next = W8;
+            Channel ch6 = new Channel();
+            ch5.Next = ch6;
             NormalRail NR40 = new NormalRail();
             NR39.Next = NR40;
             ParkRail PR6 = new ParkRail();
             PR5.Next = PR6;
 
-            Channel W9 = new Channel();
-            W8.Next = W9;
+            Channel ch7 = new Channel();
+            ch6.Next = ch7;
             NormalRail NR41 = new NormalRail();
             NR40.Next = NR41;
             ParkRail PR7 = new ParkRail();
             PR6.Next = PR7;
 
-            EndChannel W10 = new EndChannel();
-            W9.Next = W10;
+            EndChannel ch8 = new EndChannel();
+            ch8.Next = ch8;
             EndRail NR42 = new EndRail();
             NR41.Next = NR42;
             ParkRail PR8 = new ParkRail();
             PR7.Next = PR8;
-            
+
             // fill shiproute
-            _Channels[0] = W1;
-            _Channels[1] = W2;
-            _Channels[2] = W3;
-            _Channels[3] = W4;
-            _Channels[4] = W5;
-            _Channels[5] = W6;
-            _Channels[6] = W7;
-            _Channels[7] = W8;
+            _Channels[0] = ch1;
+            _Channels[1] = ch2;
+            _Channels[2] = ch3;
+            _Channels[3] = ch4;
+            _Channels[4] = ch5;
+            _Channels[5] = ch6;
+            _Channels[6] = ch7;
+            _Channels[7] = ch8;
             
             //fill switches list
             _Switches[0] = S1;
@@ -241,16 +237,16 @@ namespace Goudkoorts_Code.Domain
             Row1[10] = new Space();
             Row1[11] = new Space();
             Row1[12] = new Space();
-            Row1[13] = W1;
-            Row1[14] = W2;
-            Row1[15] = W3;
-            Row1[16] = W4;
-            Row1[17] = W5;
-            Row1[18] = W6;
-            Row1[19] = W7;
-            Row1[20] = W8;
-            Row1[21] = W9;
-            Row1[22] = W10;
+            Row1[13] = new Space();
+            Row1[14] = new Space();
+            Row1[15] = ch1;
+            Row1[16] = ch2;
+            Row1[17] = ch3;
+            Row1[18] = ch4;
+            Row1[19] = ch5;
+            Row1[20] = ch6;
+            Row1[21] = ch7;
+            Row1[22] = ch8;
 
             Row2[0] = new Space();
             Row2[1] = new Space();
