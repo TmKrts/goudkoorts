@@ -29,6 +29,12 @@
   </Class>
   <Class Name="Goudkoorts_Code.Domain.Map">
     <Position X="3.75" Y="1.5" Width="1.5" />
+    <AssociationLine Name="_WareHouse" Type="Goudkoorts_Code.Domain.WareHouse" FixedFromPoint="true">
+      <Path>
+        <Point X="5.25" Y="3.75" />
+        <Point X="7" Y="3.75" />
+      </Path>
+    </AssociationLine>
     <AssociationLine Name="_Vehicles" Type="Goudkoorts_Code.Domain.Vehicle" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="4.5" Y="5.045" />
@@ -36,20 +42,14 @@
         <Point X="7" Y="5.5" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="_WareHouse" Type="Goudkoorts_Code.Domain.WareHouse" FixedFromPoint="true">
-      <Path>
-        <Point X="5.25" Y="3.75" />
-        <Point X="7" Y="3.75" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAEAIAAAAAAEAAQgAA8AEIAAAAAAABAAAACAA=</HashCode>
       <FileName>Domain\Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Field Name="_Vehicles" />
-      <Field Name="_Switches" />
       <Field Name="_WareHouse" />
+      <Field Name="_Switches" />
+      <Field Name="_Vehicles" />
       <Property Name="Row1" />
     </ShowAsCollectionAssociation>
   </Class>

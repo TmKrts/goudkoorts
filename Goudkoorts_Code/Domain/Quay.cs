@@ -13,19 +13,19 @@ namespace Goudkoorts_Code.Domain
             set;
         }
 
-        public override bool MoveToThis(Vehicle movable)
+        public override bool MoveToThis(Vehicle vehicle)
         {
             if (Vehicle == null)
             {
                 if (Dock.Vehicle != null)
                 {
                     Dock.Vehicle.Load++;
-                    movable.Load--;
+                    vehicle.Load--;
                     Controller.Score++;
                 }
-                Vehicle = movable;
-                movable.onTrack.Vehicle = null;
-                movable.onTrack = this;
+                Vehicle = vehicle;
+                vehicle.onTrack.Vehicle = null;
+                vehicle.onTrack = this;
                 return true;
             }
 
