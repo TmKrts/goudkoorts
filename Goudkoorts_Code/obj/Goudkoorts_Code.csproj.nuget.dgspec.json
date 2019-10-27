@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zkzk\\OneDrive\\Documenten\\GitHub\\goudkoorts\\Goudkoorts_Code\\Goudkoorts_Code.csproj": {}
+    "C:\\Users\\TKaer\\Documents\\GitHub\\goudkoorts\\Goudkoorts_Code\\Goudkoorts_Code.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zkzk\\OneDrive\\Documenten\\GitHub\\goudkoorts\\Goudkoorts_Code\\Goudkoorts_Code.csproj": {
+    "C:\\Users\\TKaer\\Documents\\GitHub\\goudkoorts\\Goudkoorts_Code\\Goudkoorts_Code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zkzk\\OneDrive\\Documenten\\GitHub\\goudkoorts\\Goudkoorts_Code\\Goudkoorts_Code.csproj",
+        "projectUniqueName": "C:\\Users\\TKaer\\Documents\\GitHub\\goudkoorts\\Goudkoorts_Code\\Goudkoorts_Code.csproj",
         "projectName": "Goudkoorts_Code",
-        "projectPath": "C:\\Users\\zkzk\\OneDrive\\Documenten\\GitHub\\goudkoorts\\Goudkoorts_Code\\Goudkoorts_Code.csproj",
-        "packagesPath": "C:\\Users\\zkzk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zkzk\\OneDrive\\Documenten\\GitHub\\goudkoorts\\Goudkoorts_Code\\obj\\",
+        "projectPath": "C:\\Users\\TKaer\\Documents\\GitHub\\goudkoorts\\Goudkoorts_Code\\Goudkoorts_Code.csproj",
+        "packagesPath": "C:\\Users\\TKaer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TKaer\\Documents\\GitHub\\goudkoorts\\Goudkoorts_Code\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\zkzk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TKaer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

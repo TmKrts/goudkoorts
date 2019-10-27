@@ -14,5 +14,17 @@ namespace Goudkoorts_Code.Domain
             }
             return '-';
         }
+
+        public override bool MoveToThis(Vehicle vehicle)
+        {
+            if (Vehicle == null)
+            {
+                Vehicle = vehicle;
+                vehicle.onTrack.Vehicle = null;
+                vehicle.onTrack = this;
+                return true;
+            }
+            return true;
+        }
     }
 }
